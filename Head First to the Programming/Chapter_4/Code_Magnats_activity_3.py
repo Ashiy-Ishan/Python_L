@@ -4,6 +4,8 @@ result_file = open("result_2.txt")
 # access each line
 for line in result_file:
     line_values = line.split()
+    #also can use this syntax
+    #(name,score) = line.split()
     current_score = line_values[1]
     name = line_values[0]
     if float(current_score) >= highest_score:
