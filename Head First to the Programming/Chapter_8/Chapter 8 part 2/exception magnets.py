@@ -1,0 +1,15 @@
+# try:
+#     file = open("../deliveries.txt","a")
+#     file.write("Depot :\n")
+#     file.write("%s\n"%depot.get())
+#     file.write("Description :\n")
+#     file.write("%s\n" % description.get())
+#     file.write("Address :\n")
+#     file.write("%s\n" % address.get("1.0", END))
+#     file.close()
+#     depot.set()
+#     description.delete(0,END)
+#     address.delete("1.0", END)
+# except Exception as ex:
+#     app.title(f"error {ex}")
+#     print(ex)

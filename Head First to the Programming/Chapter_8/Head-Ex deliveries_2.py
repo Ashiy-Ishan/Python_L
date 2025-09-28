@@ -21,14 +21,16 @@ app.geometry("650x500+100+200")
 
 #app body
 Label(app,text="Depot :",height=3).pack()
-depot = Entry(app)
-depot.pack()
+#depot = Entry(app)
+Radiobutton(app,text = "Cambridge, MA").pack()
+Radiobutton(app,text = "Cambridge, UK").pack()
+Radiobutton(app,text = "Cambridge, WA").pack()
 Label(app,text="Description :",height=3).pack()
 description = Entry(app)
 description.pack()
 Label(app,text="Address :").pack()
-address = Text(app)
-address.pack(pady=10)
+address = Text(app,height=10,width=50)
+address.pack()
 
 Button(app,text = "Save",width=10,command=save_functon).pack()
 
