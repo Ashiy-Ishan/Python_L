@@ -9,7 +9,7 @@ def save_functon():
     deliver_file.write("Address :\n%s\n"%address.get("1.0",END))
     deliver_file.close()
     #clear field
-    depot.delete(END)
+    depot.set("None")
     description.delete(END)
     address.delete("1.0",END)
     print("Details saved ")
@@ -21,14 +21,17 @@ app.geometry("650x500+100+200")
 
 #app body
 Label(app,text="Depot :",height=3).pack()
-depot = Entry(app)
-depot.pack()
+depot = StringVar()
+depot.set("None")
+Radiobutton(app,text = "Cambridge, MA",value="Cambridge, MA",variable= depot).pack()
+Radiobutton(app,text = "Cambridge, UK",value="Cambridge, WA",variable= depot).pack()
+Radiobutton(app,text = "Cambridge, WA",value="Cambridge, UK",variable= depot).pack()
 Label(app,text="Description :",height=3).pack()
 description = Entry(app)
 description.pack()
 Label(app,text="Address :").pack()
-address = Text(app)
-address.pack(pady=10)
+address = Text(app,height=10,width=50)
+address.pack()
 
 Button(app,text = "Save",width=10,command=save_functon).pack()
 
