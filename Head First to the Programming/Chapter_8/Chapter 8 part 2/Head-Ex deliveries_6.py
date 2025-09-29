@@ -1,6 +1,7 @@
 from email.headerregistry import Address
 from os import write
 from tkinter import *
+import tkinter.messagebox as messagebox
 
 def save_functon():
     try:
@@ -15,6 +16,7 @@ def save_functon():
         address.delete("1.0",END)
         print("Details saved ")
     except Exception as ex:
+        messagebox.showinfo("Error","Cant write to the file %s\n"%(ex))
         print(ex)
         app.title(f"{ex}")
 
