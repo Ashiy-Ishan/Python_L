@@ -9,9 +9,9 @@ mixer = pygame.mixer
 mixer.init()
 app.title("Separate song GUI")
 
-panel_1 = SoundPanel(app,mixer,"./songs/abcdefu.mp3")
+panel_1 = SoundPanel(app, mixer, "songs/abcdefu.mp3")
 panel_1.pack()
-panel_2 = SoundPanel(app,mixer,"./songs/Ugly_Heart.mp3")
+panel_2 = SoundPanel(app, mixer, "songs/Ugly_Heart.mp3")
 panel_2.pack()
 
 def shutdown():
